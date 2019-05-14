@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "918624852896",
+    "firebase_url": "https://gerenteloja-a19b8.firebaseio.com",
+    "project_id": "gerenteloja-a19b8",
+    "storage_bucket": "gerenteloja-a19b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918624852896:android:c5d6a7d0587a621b",
+        "android_client_info": {
+          "package_name": "com.example.gerencia_loja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918624852896-fk38gjcar0qo250oks44s982kgu8j334.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfpsZNcAw5yoeMPHuyR5lBJbWqmj0q3Q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918624852896-fk38gjcar0qo250oks44s982kgu8j334.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918624852896:android:5a45bc40e5b466f8",
+        "android_client_info": {
+          "package_name": "com.example.gerenciamento_loja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918624852896-fk38gjcar0qo250oks44s982kgu8j334.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfpsZNcAw5yoeMPHuyR5lBJbWqmj0q3Q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918624852896-fk38gjcar0qo250oks44s982kgu8j334.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

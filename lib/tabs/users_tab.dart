@@ -1,9 +1,14 @@
+import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
+import 'package:gerencia_loja/blocs/user_bloc.dart';
 import 'package:gerencia_loja/widgets/user_tile.dart';
 
 class UsersTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    final _userBloc = BlocProvider.getBloc<UserBloc>();
+
     return Column(
       children: <Widget>[
         Padding(
@@ -18,14 +23,27 @@ class UsersTab extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: ListView.separated(
-            itemBuilder: (BuildContext context, int index) {
-              return UserTile();
-            },
-            itemCount: 85,
-            separatorBuilder: (BuildContext context, int index) {
-              return Divider();
-            },
+          child: StreamBuilder<List>(
+            stream: _userBloc.outUsers,
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) {
+                return Center(child: CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation(Colors.pinkAccent),
+                ));
+              }else if(snapshot.data.length == 0){
+                return Center(child:Text("Nenhum usuário encontrado!", style:TextStyle(color: Colors.pinkAccent)));
+              }else{
+                return ListView.separated(
+                  itemBuilder: (BuildContext context, int index) {
+                    return UserTile(snapshot.data[index]);
+                  },
+                  itemCount: snapshot.data.length,
+                  separatorBuilder: (BuildContext context, int index) {
+                    return Divider();
+                  },
+                );
+              }
+            }
           ),
         )
       ],

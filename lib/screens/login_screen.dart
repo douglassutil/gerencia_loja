@@ -26,8 +26,9 @@ class _LoginScreenState extends State<LoginScreen> {
           showDialog(context: context, builder: (context)=>AlertDialog(
             title: Text("Erro"),
             content: Container(
-              height: MediaQuery.of(context).size.width*0.22,
+              //height: MediaQuery.of(context).size.width*0.22,
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Icon(Icons.mood_bad),
                   Text("Você não possui os primilégios necessários")
